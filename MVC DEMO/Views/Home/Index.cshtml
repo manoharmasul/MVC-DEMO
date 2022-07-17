@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">This Is My First MVC Application</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<p>
+    @ViewData["Message"]
+ </p>
+<ol>
+    @foreach (string name in (IEnumerable<string>)ViewData["namelist"])
+    {
+        <li>
+            @name
+        </li>
+    }
+</ol>
+
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (Employee emp in(IEnumerable<Employee>) ViewData["emplist"])
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Department</td>
+            <td>@emp.Salary</td>
+        </tr>
+
+    }
+
+</table>

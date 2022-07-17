@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Disply";
+}
+
+<h1>User Details</h1>
+
+<table class="table">
+    <tr>
+        <td>Your Name</td>
+        <td>
+            @ViewBag.Name
+        </td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>
+            @ViewBag.Gender
+        </td>
+    </tr>
+    <tr>
+        <td>Hobbies</td>
+        <td>
+            @foreach (string s in ViewBag.Hobbies)
+            {
+                <p>
+                    @s
+                </p>
+
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Survey</td>
+        <td>
+            @ViewBag.Option
+        </td>
+    </tr>
+
+</table>

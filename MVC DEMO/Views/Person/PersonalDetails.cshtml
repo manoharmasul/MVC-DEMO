@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "PersonalDetails";
+}
+
+<h1>Social Survey</h1>
+
+@using (Html.BeginForm())
+ {
+    <table class="table">
+        <tr>
+            <td>Enter Name</td>
+            <td>
+                @Html.TextBox("username")
+            </td>
+        </tr>
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                @Html.RadioButton("Gender","male") Male
+                @Html.RadioButton("Gender","female") Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select Hobbies</td>
+            <td>
+                <input type="checkbox" name="hobbies" values="Music"/>Music
+                <input type="checkbox" name="hobbies" value="Sports"/>Sports
+                <input type="checkbox" name="hobbies" value="Drawing"/>Drawing
+            </td>
+        </tr>
+        <tr>
+            <td>Would you like to participate in Social Survy ?</td>
+            <td>
+                @Html.DropDownList("options")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Save" class="btn btn-outline-primary"/>
+            </td>
+        </tr>
+
+    </table>
+ }

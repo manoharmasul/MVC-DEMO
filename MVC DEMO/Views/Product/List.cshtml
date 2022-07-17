@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Product List</h1>
+<p>
+    @Html.ActionLink("Add Product","Create","Product")
+</p>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (Product Prod in ViewBag.ProductList)
+    {
+        <tr>
+            <td>@Prod.Id</td>
+            <td>@Prod.Name</td>
+            <td>@Prod.Price</td>
+        </tr>
+    }
+</table>
